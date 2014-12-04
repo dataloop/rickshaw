@@ -24,7 +24,8 @@ Rickshaw.Graph = function(args) {
 			preserve: false,
 			xScale: undefined,
 			yScale: undefined,
-			stack: true
+			stack: true,
+			domain: function () { return this.renderer.domain(); }
 		};
 
 		this._loadRenderers();
@@ -106,7 +107,7 @@ Rickshaw.Graph = function(args) {
 
 	this.discoverRange = function() {
 
-		var domain = this.renderer.domain();
+		var domain = this.domain();
 
 		// this.*Scale is coming from the configuration dictionary
 		// which may be referenced by the Graph creator, or shared
