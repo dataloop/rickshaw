@@ -1,6 +1,6 @@
 {
   "name": "dl-rickshaw",
-  "version": "1.5.0-dl0",
+  "version": "1.5.0-dl1",
   "dependencies": {
     "d3": "~3.3.6"
   },
