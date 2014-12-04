@@ -60,32 +60,14 @@ build: rickshaw.min.css rickshaw.min.js
 clean:
 	rm -rf rickshaw.css rickshaw.js rickshaw.min.*
 
-test: $(D3) $(JSDOM) $(NODEUNIT)
-	npm test
-
-$(JS_HINT):
-	npm install jshint
-
-$(CSS_MIN):
-	npm install clean-css
-
-$(JS_MIN):
-	npm install uglify-js
-
-$(D3):
-	npm install d3
-
-$(JSDOM):
-	npm install jsdom
-
-$(NODEUNIT):
-	npm install nodeunit
+test: $(D3) $(JSDOM) $(NODEUNIT) $(JS_HINT)
+	$(JS_HINT) src/js
+	$(NODEUNIT) test
 
 rickshaw.css: $(CSS_FILES)
 	cat $(CSS_FILES) > rickshaw.css
 
 rickshaw.js: $(JS_FILES) $(JS_HINT)
-	$(JS_HINT) src/js
 	cat $(JS_FILES) > rickshaw.js
 
 rickshaw.min.css: $(CSS_MIN) rickshaw.css

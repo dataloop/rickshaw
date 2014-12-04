@@ -1,3 +1,7 @@
 *.log
 *swp
 node_modules
+/rickshaw.js
+/rickshaw.min.js
+/rickshaw.css
+/rickshaw.min.css

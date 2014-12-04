@@ -1,0 +1,10 @@
+*.log
+*swp
+/.*
+/node_modules
+/tests
+/src
+/examples
+/tutorial
+/vendor
+/Makefile
