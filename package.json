@@ -1,6 +1,6 @@
 {
   "name": "dl-rickshaw",
-  "version": "1.5.0-dl2",
+  "version": "1.5.1-dl1",
   "dependencies": {
     "d3": "~3.3.6"
   },
@@ -24,6 +24,6 @@
   },
   "scripts": {
     "test": "nodeunit tests",
-    "prepublish": "make"  
+    "prepublish": "make"
   }
 }
